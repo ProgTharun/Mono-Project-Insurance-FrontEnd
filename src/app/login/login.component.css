@@ -1,0 +1,144 @@
+/* General Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 400px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333333;
+  font-weight: 600;
+}
+
+/* Form Styling */
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 0.95rem;
+  color: #555555;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0056b3;
+}
+
+/* Password Container */
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: -30px;
+  outline: none;
+}
+
+.fa {
+  color: #555555;
+}
+
+/* CAPTCHA */
+.captcha-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.captcha-image {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.refresh-captcha-btn {
+  background: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.refresh-captcha-btn:hover {
+  background: #003f8a;
+}
+
+/* Error Messages */
+.form-error {
+  font-size: 0.8rem;
+  color: #d9534f;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.submit-btn:disabled {
+  background: #b3d1f1;
+  cursor: not-allowed;
+}
+
+/* Footer Link */
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

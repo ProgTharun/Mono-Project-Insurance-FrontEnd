@@ -1,0 +1,89 @@
+<div class="login-container">
+  
+  <div class="login-card">
+    <h2 class="form-title">Welcome Back</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitData()" class="login-form">
+      <!-- Username -->
+      <div class="form-group">
+        <label for="userName" class="form-label">Username</label>
+        <input
+          id="userName"
+          class="form-control"
+          formControlName="userName"
+          type="text"
+          placeholder="Username"
+        />
+        <small
+          class="form-error"
+          *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].invalid"
+        >
+          Username is required.
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <div class="password-container">
+          <input
+            id="password"
+            class="form-control"
+            formControlName="password"
+            [type]="hidePassword ? 'password' : 'text'"
+            placeholder="Password"
+          />
+          <button
+            type="button"
+            class="toggle-password-btn"
+            (click)="togglePasswordVisibility()"
+          >
+            <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
+          </button>
+        </div>
+        <small
+          class="form-error"
+          *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+        >
+          Password must be at least 8 characters.
+        </small>
+      </div>
+
+      <!-- CAPTCHA -->
+      <div class="form-group">
+        <label for="captchaInput" class="form-label">CAPTCHA</label>
+        <div class="captcha-container">
+          <img [src]="captchaImage" alt="CAPTCHA" class="captcha-image" />
+          <button
+            type="button"
+            class="refresh-captcha-btn"
+            (click)="generateCaptcha()"
+          >
+            Refresh
+          </button>
+        </div>
+        <input
+          id="captchaInput"
+          class="form-control"
+          formControlName="captchaInput"
+          type="text"
+          placeholder="Enter CAPTCHA"
+        />
+        <small
+          class="form-error"
+          *ngIf="loginForm.controls['captchaInput'].touched && loginForm.controls['captchaInput'].invalid"
+        >
+          CAPTCHA is required.
+        </small>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn" [disabled]="loginForm.invalid">Login</button>
+
+      <!-- Register Link -->
+      <p class="form-footer">
+        Don't have an account? <a routerLink="/registration" class="register-link">Register here</a>
+      </p>
+    </form>
+  </div>
+  <app-footer-end></app-footer-end>
+</div>

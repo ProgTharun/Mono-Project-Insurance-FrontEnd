@@ -1,0 +1,185 @@
+<div class="wrapper">
+    <!-- <app-customer-header></app-customer-header> -->
+
+    <div class="top_link">
+        <button (click)="goBack()" class="btn-back">
+            <img src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="" />
+            Back
+        </button>
+    </div>
+
+    <!-- CUSTOMER DETAILS SECTION -->
+    <div class="section">
+        <h2 class="heading">Customer Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Agent Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ customerData.customerFirstName }} {{ customerData.customerLastName }}</td>
+                    <td>{{ customerData.userName }}</td>
+                    <td>{{ customerData.email }}</td>
+                    <td>{{ customerData.phone }}</td>
+                    <td>{{ customerData.agentName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CUSTOMER ADDRESS SECTION -->
+    <div class="section">
+        <h2 class="heading">Customer Address</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>House No</th>
+                    <th>Apartment</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ customerData.houseNo }}</td>
+                    <td>{{ customerData.apartment }}</td>
+                    <td>{{ customerData.city }}</td>
+                    <td>{{ customerData.state }}</td>
+                    <td>{{ customerData.pincode }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- POLICY DETAILS SECTION -->
+    <div class="section">
+        <h2 class="heading">Policy Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Scheme Name</th>
+                    <th>Issue Date</th>
+                    <th>Maturity Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ policy.insuranceSchemeName }}</td>
+                    <td>{{ policy.issueDate | date: 'dd-MM-YYYY' }}</td>
+                    <td>{{ policy.maturityDate | date: 'dd-MM-YYYY' }}</td>
+                    <td>{{ policy.policyStatus }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PREMIUM DETAILS SECTION -->
+    <div class="section">
+        <h2 class="heading">Premium Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Premium Amount</th>
+                    <th>Premium Type</th>
+                    <th>Policy Terms</th>
+                    <th>Sum Assured</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>₹ {{ policy.premiumAmount }}</td>
+                    <td>{{ policy.premiumType }}</td>
+                    <td>{{ policy.policyTerm }} Months</td>
+                    <td>₹ {{ policy.sumAssured }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- NOMINEE DETAILS SECTION -->
+    <div class="section">
+        <h2 class="heading">Nominee Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr. No</th>
+                    <th>Name</th>
+                    <th>Relation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let nominee of policy.nominees; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ nominee.nomineeName }}</td>
+                    <td>{{ nominee.relationship }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- DOCUMENT DETAILS SECTION -->
+    <div class="section">
+        <h2 class="heading">Documents</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr. No</th>
+                    <th>Document Name</th>
+                    <th>Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let document of policy.documents; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ document.documentName }}</td>
+                    <td>
+                        <img [src]="document.documentPath" alt="Document Preview" width="80" height="80" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Installments -->
+    <h2>Installments</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr. No</th>
+                <th>Due Date</th>
+                <th>Payment Date</th>
+                <th>Amount Due</th>
+                <th>Amount Paid</th>
+                <th>Status</th>
+                <th>Payment Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let installment of policy.installments; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ installment.dueDate | date: 'dd-MM-yyyy' }}</td>
+                <td>{{ installment.paymentDate ? (installment.paymentDate | date: 'dd-MM-yyyy') : '-' }}</td>
+                <td>₹ {{ installment.amountDue }}</td>
+                <td>{{ installment.amountPaid ? ('₹ ' + installment.amountPaid) : 'N/A' }}</td>
+                <td>
+                    <span [ngClass]="{
+                        'text-success': installment.status === 1,
+                        'text-danger': installment.status === 0
+                    }">
+                        {{ installment.status === 1 ? 'Paid' : 'Unpaid' }}
+                    </span>
+                </td>
+                <td>{{ installment.paymentReference }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

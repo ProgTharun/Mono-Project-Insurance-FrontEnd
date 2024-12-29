@@ -1,0 +1,132 @@
+/* Updated CSS with replaced colors */
+
+.wrapper {
+  background-color: white;
+  padding: 20px;
+  min-height: 93vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pageSizeSelect {
+  border-color: blue;
+  width: 80px;
+  border-width: 2px;
+  outline: none;
+}
+
+#pageSizeSelect:focus {
+  outline: 2px solid blue; /* Highlight color for input focus */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center align Customers text */
+}
+
+.top_link .back-button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-search {
+  border-radius: 6px; /* Rounded corners */
+  border: 2px solid azure; /* Specify the border with a solid line */
+  background-color: blue; /* Primary button color */
+  padding: 6px 18px; /* Padding inside the button */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-search:hover {
+  background-color: blue; /* Lighter color on hover */
+  color: white; /* Ensure the text remains white */
+  border-color: blue; /* Change the border color to match the hover background */
+}
+
+.search-container input.form-control {
+  width: 200px; /* Decreased input width */
+  outline: none;
+  border-color: blue;
+  border-width: 2px; /* Added outline color */
+}
+
+.search-container input.form-control:focus {
+  outline: 2px solid blue; /* Highlight color for input focus */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h4 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}
+
+/* Backdrop Overlay */
+.modal-overlay {
+  position: fixed; /* Ensures it covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+  z-index: 1040; /* Ensure it's behind the modal box */
+}
+
+/* Rejection Box Modal */
+.reject-box {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset for perfect centering */
+  width: 400px; /* Define a fixed width */
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+  border-radius: 8px; /* Smooth rounded corners */
+  z-index: 1050; /* Ensure it's above the overlay */
+  padding: 20px; /* Add some padding inside the box */
+}
+
+.btn-back{
+  background-color: blue;
+  border-color: blue;
+}
+

@@ -1,0 +1,199 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f3faf4;
+    padding: 20px;
+    min-height: 83vh; /* Ensure the wrapper takes up the full viewport height */
+}
+
+.container {
+    flex-grow: 1; /* Ensures the container grows to take up available space */
+    background-color: rgba(252, 252, 252, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#pageSizeSelect {
+    width: 80px;
+    border-color: #00d1b2;
+    border-width: 2px;
+    outline: none;
+}
+
+#pageSizeSelect:focus {
+    outline: 2px solid #00d1b2;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Aligns search to the right */
+}
+
+.search-container input.form-control {
+    width: 200px;
+    outline: none;
+    border-color: #00d1b2;
+    border-width: 2px;
+}
+
+.search-container input.form-control:focus {
+    outline: 2px solid #00d1b2;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #eaf7ff;
+}
+
+.pagination .page-link {
+    color: #00d1b2;
+    border-color: #00d1b2;
+    border-width: 2px;
+    padding: 10px 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    color: white;
+    background-color: #00d1b2;
+}
+
+.pagination .active .page-link {
+    background-color: #00d1b2;
+    color: white;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    margin-top: auto;
+    width: 100%;
+}
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn-search {
+    border-radius: 6px; /* Rounded corners */
+    border: 2px solid azure; /* Specify the border with a solid line */
+    background-color: #00d1b2; /* Primary button color */
+    padding: 6px 18px; /* Padding inside the button */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .btn-search:hover {
+    background-color: #03d6b7; /* Lighter color on hover */
+    color: white; /* Ensure the text remains white */
+    border-color: #03d6b7; /* Change the border color to match the hover background */
+  }
+  
+  .btn-reset {
+    border-radius: 4px; /* Rounded corners */
+    border: 2px solid #ff6767; /* Specify the border with a solid line */
+    background-color: #ff6767; /* Primary button color */
+    padding: 4px 12px; /* Padding inside the button */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .btn-reset:hover {
+    background-color: #ff4c4c; /* Slightly darker color on hover */
+    color: white; /* Ensure the text remains white */
+    border-color: #ff4c4c; /* Match border color with hover background */
+  }
+  /* Modal background with color and opacity */
+.modal.custom-modal {
+    background-color: rgba(243, 250, 244, 0.8); /* Light greenish background with opacity */
+  }
+  
+  /* Modal dialog centered */
+  .modal-dialog {
+    max-width: 600px; /* Adjust modal width if needed */
+    margin: auto;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #ffffff; /* White content background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+    padding: 20px;
+  }
+  
+  /* Modal header */
+  .modal-header {
+    background-color: #f3faf4; /* Matches the modal background */
+    border-bottom: 1px solid #dcdcdc;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Modal title */
+  .modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Modal footer */
+  .modal-footer {
+    border-top: 1px solid #dcdcdc;
+    justify-content: flex-end;
+  }
+  
+.modal {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}

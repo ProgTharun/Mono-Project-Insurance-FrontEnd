@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0px;
+    background-color: #edf6fc;
+}
+.wrapper
+{
+  background-color: white !important;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px; /* Thin scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #edf6fc; /* Background color for the track */
+  border-radius: 10px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #485563; /* Thumb color */
+  border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #005bb5; /* Slightly darker shade on hover */
+}
+ /* Footer styles */
+ app-footer-end {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 0 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+.btn-back
+{
+  border-radius: 4px;
+  margin-top: 2%;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: #007bff !important;
+
+}
+.btn-back:hover
+{
+  background-color: #007bff !important;
+}
+#pageSizeSelect {
+  border-color: #007bff !important;
+}
+
+#pageSizeSelect:focus {
+  outline: 2px solid #007bff !important; 
+}
+.container {
+  background-color: white !important;
+}
+/* style.css */
+
+.search-container input.form-control {
+  width: 200px; /* Decreased input width */
+  outline: none;
+  border-color: #007bff !important;
+  border-width: 2px; /* Added outline color */
+}
+
+.search-container input.form-control:focus {
+  outline: 2px solid #007bff !important; /* Highlight color for input focus */
+}
+.btn-search{
+  background-color: #007bff !important;
+}
+.form-control {
+  
+  outline: 2px solid #007bff !important;
+}
+.card{
+  background-color: white !important;
+}
+.card a:hover .card-title {
+  color: #007bff !important; /* Add hover color for the title */
+}
+.card-link:hover .card-title {
+  color: #007bff !important; /* Hover color for card title */
+}
+
+.header {
+  background-color:  #0b51c9 !important; /* Dark shade for header */
+  padding: 10px 0;
+}
+
+.table thead th {
+  background-color: white !important; /* Set header background to white */
+  color: black !important; /* Set header text to black */
+  border-bottom: 2px solid #ccc; /* Optional: Add a subtle border */
+}
+
+/* Optional: Adjust table hover for consistency */
+.table tbody tr:hover {
+  background-color: #f9f9f9; /* Slight hover effect for table rows */
+}

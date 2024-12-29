@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Wrapper Styles */
+.wrapper {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile svg {
+  margin-right: 15px;
+}
+
+.profile h4 {
+  color: #4a90e2;
+  font-size: 20px;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.table-bordered td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.table-bordered td:first-child {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* Button Styles */
+.btn-back {
+  background-color: #e1e1e1;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #d4d4d4;
+  transition: background-color 0.3s;
+}
+
+/* Footer Styles */
+app-footer-end {
+  margin-top: 30px;
+}
